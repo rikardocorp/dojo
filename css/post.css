@@ -1,7 +1,4 @@
-/****************
-advanced comment styles
-****************/
- 
+/*
 h3#comments,.comment-navigation,.comment-navigation:after,#respond:after,.comment-rss{display:block} 
 ol.commentlist{width:100%} 
 h3#comments,#respond h3{height:25px;text-align:left;background:#4c7faa;color:#fff;padding:5px 0 0 5px} 
@@ -46,7 +43,7 @@ p.subscribe-to-comments input{margin:5px 3px 3px 3px !important;border:0}
 p.subscribe-to-comments label{top:-2px;color:#666} 
 .comment-rss{background:url('images/rss_32.png') no-repeat} 
  
-/*comment total stlying*/
+
  
 .comment-total{text-align: center;font-size: 1.5em;color: #fff;}
-.comment-total span{font-size: 2em;color: #800000;}
+.comment-total span{font-size: 2em;color: #800000;}*/
