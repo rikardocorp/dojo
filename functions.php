@@ -2,12 +2,13 @@
 	/*------------------------------------------------------------*/
 	/*   Cambiar logo wordpress del administrador
 	/*------------------------------------------------------------*/
-	function logo_admin() {
+	function my_custom_login_logo() 
+	{
 	    echo '<style type="text/css">
-	        h1 a { background-image:url('.get_bloginfo('template_directory').'/images/minuevologo.gif); }
+	        h1 a { background-image:url('.get_bloginfo('template_url').'/images/logo-karate.png) !important; }
 	    </style>';
 	}
-	add_action('login_head', 'logo_admin');
+	add_action('login_head', 'my_custom_login_logo');
 
 	/*------------------------------------------------------------*/
 	/*   Registrar Menus WP3.0+
@@ -33,10 +34,16 @@
 	    wp_deregister_script( 'jquery' );
 	    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
 	    wp_register_script('slider', get_template_directory_uri() . '/js/slider.js', 'jquery');
+		wp_register_script('assets', get_template_directory_uri() . '/js/assets.js', 'jquery');
 	    if(is_home()){
 		    wp_enqueue_script( 'jquery' );
 		    wp_enqueue_script( 'slider' );  
-		} 
+		}
+		else{
+			wp_enqueue_script( 'jquery' );
+		    wp_enqueue_script( 'assets' ); 
+		}
+		 
 	}    
 	add_action('wp_enqueue_scripts', 'wd_load_script');
 	
