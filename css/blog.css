@@ -12,6 +12,7 @@ header{background:url("../images/header.jpg") center;height:161px;}
 header .content{background:transparent}
 header h1{float:left;text-align:right}
 header img{float:left}
+a{color:#fff}
 #entradas{padding-top:50px;overflow:hidden}
 .posts{float:left;width:660px}
 .post{overflow:hidden;color:#000;margin-bottom:60px;}
@@ -21,9 +22,11 @@ header img{float:left}
 .post .entrada .date{color:#6b6b6b;font-size:14px;font-weight:normal}
 .post .entrada .titulo{font-size:30px;font-weight:normal}
 .post .entrada .mas-info{color:#000;margin-top:20px;display:block}
+.post .entrada .post-metadata a{color:#fff;background:#808080;text-decoration:none;padding:2px 5px;}
+.post .entrada .post-metadata a:hover{background:#000}
 .post .datos{width:60px;float:left;}
 .post .datos .tipo{background-color:#ed1c24;width:60px;height:60px;display:block}
-.post .datos .video{background:#ed1c24 url("../images/aset1.png") no-repeat center}
+.post .datos .videos{background:#ed1c24 url("../images/aset1.png") no-repeat center}
 .post .datos .n-coment{background:#fff;width:40px;margin:10px auto;text-align:center;padding:10px 0;display:block}
 .sidebar{float:left;margin-left:40px;}
 .sidebar h4{background:#ed1c24;font-weight:normal;height:43px;letter-spacing:3px;line-height:43px;text-align:center;text-transform:uppercase;width:300px;margin:10px 0 30px}
@@ -32,6 +35,7 @@ header img{float:left}
 .sidebar a:hover{text-decoration:underline}
 .sidebar li{list-style:none;padding-left:50px}
 .post-comentarios ol,.post-comentarios ul{list-style:none}
+.post-comentarios h3{background:#ed1c24;text-align:center;font-weight:normal;padding:10px 0;-o-border-radius:5px 5px 0 0;-ms-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}
 .commentlist{background:#d3d3d3;color:#000;}
 .commentlist a{color:#000}
 .commentlist .comment{background:#fff;flaot:right;display:block;}
@@ -44,11 +48,13 @@ header img{float:left}
 .commentlist .comment .comment-text{padding:10px}
 .commentlist .comment .reply{margin:0 10px 10px;float:right}
 .children{width:95%;margin-left:5%;border-left:1px solid #808080;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-#respond h3{text-transform:uppercase;background:#4e4e4e;padding:5px 20px;-o-border-radius:0 0 30px 0;-ms-border-radius:0 0 30px 0;-moz-border-radius:0 0 30px 0;-webkit-border-radius:0 0 30px 0;border-radius:0 0 30px 0;border-left:10px solid #000;margin:20px 0;font-weight:normal;font-size:30px;letter-spacing:3px;border-bottom:1px solid #fff}
+#respond h3{text-transform:uppercase;background:#ed1c24;padding:5px 20px;-o-border-radius:0 0 30px 0;-ms-border-radius:0 0 30px 0;-moz-border-radius:0 0 30px 0;-webkit-border-radius:0 0 30px 0;border-radius:0 0 30px 0;border-left:10px solid #1a1a1a;margin:20px 0;font-weight:normal;letter-spacing:3px;border-bottom:1px solid #1a1a1a}
+#respond #commentform input,#respond #commentform textarea{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(1, #fff));background:-o-linear-gradient(top, #eee 0%, #fff 100%);background:-ms-linear-gradient(top, #eee 0%, #fff 100%);background:-moz-linear-gradient(top, #eee 0%, #fff 100%);background:-webkit-linear-gradient(top, #eee 0%, #fff 100%);background:linear-gradient(top, #eee 0%, #fff 100%);border:1px solid #fff;-o-border-radius:5px;-ms-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:10px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+#respond #commentform input:focus,#respond #commentform textarea:focus{border-color:#000}
 #respond #commentform #comment{max-width:460px}
 #respond #commentform #submit{background:#4e4e4e;border:none;border-bottom:5px solid #808080;-o-border-radius:5px;-ms-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;color:#fff;cursor:pointer;float:right;font-size:12px;margin:10px 0;padding:7px 30px;text-transform:uppercase;clear:left}
 #respond #commentform .left{width:200px;float:left;}
-#respond #commentform .left input{width:100%}
+#respond #commentform .left input{width:auto;display:block}
 #respond #commentform .right{width:440px;float:left}
 .paginador{float:left;clear:right;background:#fff;color:#808080;padding:0 10px;-o-border-radius:20px;-ms-border-radius:20px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;margin-bottom:10px;font-size:0;overflow:hidden;background:#808080;}
 .paginador a{color:#808080;padding:10px 20px;text-decoration:none;font-size:13px;text-transform:uppercase;display:inline-block;zoom:1;*display:inline;background:#fff;}
