@@ -18,7 +18,7 @@
 	if ( function_exists( 'register_nav_menus' ) )
 	{
 		register_nav_menus(
-	    	array('MenuPrincipal' => __( 'Menu Principal' ),'MenuCategorias' => __( 'Menu Categorias' ))
+	    	array('MenuPrincipal' => __( 'Menu Principal' ),'MenuCategorias' => __( 'Menu Categorias' ),'MenuLinks'=>__('Menu Links'))
 		);
 	}
 
