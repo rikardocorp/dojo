@@ -1,14 +1,15 @@
 
 $(window).on('load',function(){
-	var top = $('.sidebar').offset().top;
+	var top = $('nav').offset().top;
+
 	$(window).on('scroll',function(e){
 		var y = $(this).scrollTop();
 		console.log(y)
 		if(top >= y){
-			$('.sidebar .container').removeClass('fixed');
+			$('nav , .sidebar .container').removeClass('fixed');
 			
 		}else{
-			$('.sidebar .container').addClass('fixed');
+			$('nav , .sidebar .container').addClass('fixed');
 
 
 		}
