@@ -144,9 +144,22 @@ header
 
 //formualrio de respuesta
 #respond
+	h3 
+		text-transform uppercase
+		background #4e4e4e
+		padding 5px 20px
+		border-radius 0 0 30px 0
+		border-left 10px solid black
+		margin 20px 0
+		font-weight normal
+		font-size 30px
+		letter-spacing 3px
+		border-bottom 1px solid white
+
 	#commentform
+		@extends .clearfix
 		#comment
-			max-width 660px
+			max-width 460px
 		#submit
 			background #4e4e4e
 			border none 
@@ -159,6 +172,17 @@ header
 			margin 10px 0
 			padding 7px 30px
 			text-transform uppercase
+			clear left
+
+		.left 
+			width 200px 
+			float left 
+			input
+				width 100%
+		.right 
+			width 440px
+			float left
+
 //paginacion 
 .paginador
 	float left
