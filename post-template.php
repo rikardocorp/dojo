@@ -45,10 +45,12 @@ Template Name Posts: rick-post
 				<div class="posts">							
 			<?php  	if(have_posts()):
 				  		//print_r(query_posts($consulta));
-			      		while ( have_posts() ) : the_post(); ?>
+			      		while ( have_posts() ) : the_post(); 
+			      			$categoria = get_the_category($post->ID);
+							$cate = $categoria[0]->cat_name;?>
 				  		<article class="post">
 				  			<div class="datos">
-				  				<a href="#" class="tipo video"></a>
+				  				<a href="#" class="tipo video"><?php echo $cate;?></a>
 				  				<span class="n-coment"><?php comments_number( '0', '1', '%' ); ?></span>
 				  			</div>
 				  			<div class="entrada">
