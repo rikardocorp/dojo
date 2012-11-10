@@ -118,7 +118,7 @@ Template Name: rick-blog
 							<h2 class="titulo">Lo sentimos, no se han encontrado entrada</h2>				
 						</div>
 					</article>
-			<?php endif; $hace = new haceTanto('2012-02-22 18:42:00','i'); echo 'Hace'.$hace;?>
+			<?php endif; //$hace = new haceTanto('2012-02-22 18:42:00','i'); echo 'Hace'.$hace;?>
 			<center>
 				<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 			</center>

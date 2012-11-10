@@ -1,4 +1,13 @@
 <?php
+	/*------------------------------------------------------------*/
+	/*   Cambiar logo wordpress del administrador
+	/*------------------------------------------------------------*/
+	function logo_admin() {
+	    echo '<style type="text/css">
+	        h1 a { background-image:url('.get_bloginfo('template_directory').'/images/minuevologo.gif); }
+	    </style>';
+	}
+	add_action('login_head', 'logo_admin');
 
 	/*------------------------------------------------------------*/
 	/*   Registrar Menus WP3.0+
