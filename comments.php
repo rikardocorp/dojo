@@ -62,14 +62,11 @@
  
 <?php else : //this is where we setup the comment input forums ?>
 <div class="left"> 
-<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="author"><small>Nombre <?php if ($req) echo "(required)"; ?></small></label></p>
+<p><label for="author"><small>Nombre <?php if ($req) echo "*"; ?></small></label><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> /></p>
  
-<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="email"><small>Email (no será publicado) <?php if ($req) echo "(required)"; ?></small></label></p>
+<p><label for="email"><small>Email (no será publicado) <?php if ($req) echo "*"; ?></small></label><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> /></p>
  
-<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-<label for="url"><small>Website</small></label></p>
+<p><label for="url"><small>Website</small></label><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" /></p>
 </div>
  
 <?php endif; ?>
