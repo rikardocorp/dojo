@@ -37,12 +37,14 @@
 	    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
 	    wp_register_script('slider', get_template_directory_uri() . '/js/slider.js', 'jquery');
 		wp_register_script('assets', get_template_directory_uri() . '/js/assets.js', 'jquery');
+		wp_register_script('validate', get_template_directory_uri() . '/js/jquery.validate.js', 'jquery');
 	    if(is_home()){
 		    wp_enqueue_script( 'jquery' );
 		    wp_enqueue_script( 'slider' );  
 		}
 		else{
 			wp_enqueue_script( 'jquery' );
+			wp_enqueue_script( 'validate' );
 		    wp_enqueue_script( 'assets' ); 
 		}
 		 
@@ -59,6 +61,66 @@
 	
 	// quitar el margin-top de la etiqueta html -o- usuarios / perfil / Muestra la barra de herramientas en el sitio
 	//function my_function_admin_bar(){return false;}add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+	
+	
+	// existencia de codigos abreviados
+	function gallery_shortcode_exists()
+	{
+	
+	    global $post;
+	
+	    # Check the content for an instance of [gallery] with or without arguments
+	    $pattern = get_shortcode_regex();
+	    if(
+	        preg_match_all( '/'. $pattern .'/s', $post->post_content, $matches )
+	        && array_key_exists( 2, $matches )
+	        && in_array( 'gallery', $matches[2] )
+	    )
+	        return true;
+	
+	    # Sourced from http://codex.wordpress.org/Function_Reference/get_shortcode_regex
+	}
+	// 
+	function the_shortcode_excerpt()
+	{
+		# Determine if the post_content column contains the string [gallery]
+		if( gallery_shortcode_exists() ){
+		
+		    # Get the first three attachments using the posts_per_page parameter
+		    $args = array(
+		        'post_type' => 'attachment',
+		        'post_mime_type' => 'image',
+		        'posts_per_page' => 3,
+		        'post_parent' => get_the_ID()
+		    );
+		    $attachments = get_children( $args );
+		
+		    # If any attachments are returned, proceed
+		    if( $attachments ){
+		
+		        # Spin cycle to collate attachment IDs
+		        foreach( $attachments as $attachment )
+		            $includes[] = $attachment->ID;
+		
+		        # Format our IDs in a comma-delimited string
+		        $includes = implode(',', $includes);
+		
+		        # Inject your include argument
+		        $shortcode = str_replace('[gallery', "[gallery include='$includes' ", get_the_content());
+		
+		        # Render the Gallery using the standard editorial input syntax
+		        echo do_shortcode($shortcode);
+		
+		        # Add a View More link
+		        echo '<a href="' . get_permalink() . '">' . __('View more', 'domain') . '</a>';
+		    }
+		    else
+		        _e('Foo Bar - No attachments found and no excerpt to display', 'domain');
+		}
+		else
+		    # Whatever fallback you desire
+		    the_excerpt();
+	}
 	
 	
 	// para dar formato a fecha de publicacion 
@@ -189,5 +251,7 @@ add_filter( 'the_posts', 'close_comments' );
     echo '<a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'">Spam</a>';
   }
 }
+
+
 ?>
 

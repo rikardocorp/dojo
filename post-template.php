@@ -58,9 +58,10 @@ Template Name Posts: rick-post
 				  				<h3 class="date"><?php the_time('l j F Y') ?> | <?php the_time('g:i a'); ?> <?php the_author() ?> <?php $key="estado"; echo get_post_meta($post->ID, $key, true); ?></h3>
 				  				<hr>
 				  				<div class="post-contenido">
+				  					<?php echo get_the_post_thumbnail($page->ID, 'large'); ?>
 						            <?php the_content(); ?>
 						            <p class="post-metadata">
-						                <?php _e('Archivado en:'); ?> <?php the_category(', ') ?> <?php _e('Escrito por:'); ?> <?php  the_author(); ?><br />
+						                <?php _e('Escrito por:'); ?> <?php  the_author(); ?><br />
 						                <?php comments_popup_link('Sin Comentarios', '1 Comentario', '% Comentario'); ?> <?php edit_post_link('Editar', ' &#124; ', ''); ?>
 						            </p>
 						        </div>
