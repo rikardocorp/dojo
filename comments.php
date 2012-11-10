@@ -61,7 +61,7 @@
 <p>Conectado como <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Desconectarse de esta cuenta">Desconectarse &raquo;</a></p>
  
 <?php else : //this is where we setup the comment input forums ?>
- 
+<div class="left"> 
 <p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 <label for="author"><small>Nombre <?php if ($req) echo "(required)"; ?></small></label></p>
  
@@ -70,13 +70,14 @@
  
 <p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 <label for="url"><small>Website</small></label></p>
+</div>
  
 <?php endif; ?>
  
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
- 
+<div class="right"> 
 <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
- 
+</div> 
 <p><input name="submit" type="submit" id="submit" tabindex="5" value="Comentar" />
 <?php comment_id_fields(); ?>
 </p>
