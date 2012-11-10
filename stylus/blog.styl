@@ -15,6 +15,9 @@ a
 #entradas
 	padding-top 50px
 	overflow hidden
+	.content
+		position relative
+		@extends .clearfix
 .posts 
 	float left
 	width 660px
@@ -72,6 +75,7 @@ a
 .sidebar 
 	float left
 	margin-left 40px
+	@extends .clearfix
 	h4 
 		background #ed1c24
 		font-weight normal
@@ -98,8 +102,12 @@ a
 	li 
 		list-style none
 		padding-left 50px
-
-
+	.container
+		position relative
+		width auto
+		&.fixed 
+			position fixed 
+			top 0
 // estilos de comentarios!!!
 .post-comentarios
 	ol
