@@ -1,4 +1,5 @@
-$(function(){
+
+$(window).on('load',function(){
 	var top = $('.sidebar').offset().top;
 	$(window).on('scroll',function(e){
 		var y = $(this).scrollTop();
