@@ -18,10 +18,10 @@ Template Name Posts: rick-post
         echo " | $site_description";
         ?>
    </title>
-	
-	<link href='<?= get_template_directory_uri().'/css/blog.css' ?>' rel="stylesheet" />
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
+	<link href='<?php echo get_template_directory_uri().'/css/blog.css' ?>' rel="stylesheet" />
 	<link href='<?php bloginfo( 'stylesheet_url' ); ?>' rel="stylesheet" />
-	<link href='<?= get_template_directory_uri().'/css/post.css' ?>' rel="stylesheet" />
+	<link href='<?php echo get_template_directory_uri().'/css/post.css' ?>' rel="stylesheet" />
 	<!--[if IE]>
     	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->

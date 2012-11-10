@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); //cambiamos <meta charset="utf-8"> por su   ?>" />
-	
 	<? //evitar algo de contenido duplicado al decirle a los spiders que no indexen todo el contenido.?>
 	<?php if((is_home() && ($paged < 2 )) || is_single() || is_page() || is_category()){
 	    echo '<meta name="robots" content="index,follow" />';
@@ -34,7 +33,8 @@
         //echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
         ?>
    </title>
-	<link href='<?= get_template_directory_uri().'/css/slider.css' ?>' rel="stylesheet" />
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
+	<link href='<?php echo get_template_directory_uri().'/css/slider.css' ?>' rel="stylesheet" />
 	<link href='<?php bloginfo( 'stylesheet_url' ); ?>' rel="stylesheet" />
 	
 	<!--[if IE]>
