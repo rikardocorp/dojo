@@ -149,7 +149,7 @@ function advanced_comment($comment, $args, $depth) {
  
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
    <div class="comment-author vcard">
-     <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
+     <?php echo get_avatar($comment,$size='70' ); ?>
        <div class="comment-meta"<a href="<?php the_author_meta( 'user_url'); ?>"><?php printf(__('%s'), get_comment_author_link()) ?></a></div>
        <small><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?><?php edit_comment_link(__('(Edit)'),'  ','') ?></small>
      </div>
