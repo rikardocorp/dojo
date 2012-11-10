@@ -49,7 +49,7 @@ Template Name Posts: rick-post
 				  		<article class="post">
 				  			<div class="datos">
 				  				<a href="#" class="tipo video"></a>
-				  				<span class="n-coment"><?php the_ID(); ?></span>
+				  				<span class="n-coment"><?php comments_number( '0', '1', '%' ); ?></span>
 				  			</div>
 				  			<div class="entrada">
 				  				<h2 class="titulo"><?php the_title(); ?></h2>
