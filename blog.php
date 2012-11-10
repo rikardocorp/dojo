@@ -97,8 +97,12 @@ Template Name: rick-blog
 				  				<h2 class="titulo"><?php the_title(); ?></h2>
 				  				<h3 class="date"><?php the_time('l j F Y') ?> | <?php the_time('g:i a'); ?> <?php the_author() ?> <?php $key="estado"; echo get_post_meta($post->ID, $key, true); ?></h3>
 				  				<hr>
-				  				<?php the_content(); $timestamp  = get_post_time('U', true); echo $timestamp;?>
-				  				
+				  				<?php 
+				  				if( $cate == 'videos' || $cate == 'fotos'):
+				  					the_advanced_excerpt(); //$timestamp  = get_post_time('U', true); echo $timestamp;
+								else:
+									the_advanced_excerpt();
+								endif;?>
 				  				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="mas-info">Seguir leyendo</a>
 				  			</div>
 				  		</article>
