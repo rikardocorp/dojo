@@ -6,6 +6,8 @@
 	{
 	    echo '<style type="text/css">
 	        h1 a { background-image:url('.get_bloginfo('template_url').'/images/logo-karate.png) !important; }
+			input.button-primary { border-color: #666 !important; background: #FF0000 !important; }
+			#login a, #login p { color: #FF0000 !important; }
 	    </style>';
 	}
 	add_action('login_head', 'my_custom_login_logo');
