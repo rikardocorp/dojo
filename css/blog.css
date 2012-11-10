@@ -59,6 +59,7 @@ a{color:#fff}
 #respond #commentform .left{width:200px;float:left;}
 #respond #commentform .left input{width:auto;display:block}
 #respond #commentform .right{width:440px;float:left}
+.wp-pagenavi{margin-bottom:20px}
 .paginador{float:left;clear:right;background:#fff;color:#808080;padding:0 10px;-o-border-radius:20px;-ms-border-radius:20px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;margin-bottom:10px;font-size:0;overflow:hidden;background:#808080;}
 .paginador a{color:#808080;padding:10px 20px;text-decoration:none;font-size:13px;text-transform:uppercase;display:inline-block;zoom:1;*display:inline;background:#fff;}
 .paginador a:hover{background:#808080;color:#fff}
