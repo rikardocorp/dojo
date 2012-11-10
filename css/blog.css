@@ -28,7 +28,10 @@ nav.fixed{position:fixed;top:0;z-index:5;width:100%}
 .post .entrada .post-metadata a:hover{background:#000}
 .post .datos{width:60px;float:left;}
 .post .datos .tipo{background-color:#ed1c24;width:60px;height:60px;display:block}
-.post .datos .videos{background:#ed1c24 url("../images/aset1.png") no-repeat center}
+.post .datos .videos{background:#ed1c24 url("../images/videos.png") no-repeat center}
+.post .datos .eventos{background:#ed1c24 url("../images/eventos.png") no-repeat center}
+.post .datos .fotos{background:#ed1c24 url("../images/fotos.png") no-repeat center}
+.post .datos .informacion{background:#ed1c24 url("../images/informacion.png") no-repeat center}
 .post .datos .n-coment{background:#fff;width:40px;margin:10px auto;text-align:center;padding:10px 0;display:block}
 .sidebar{float:left;margin-left:40px;}
 .sidebar h4{background:#ed1c24;font-weight:normal;height:43px;letter-spacing:3px;line-height:43px;text-align:center;text-transform:uppercase;width:300px;margin:10px 0 30px}
