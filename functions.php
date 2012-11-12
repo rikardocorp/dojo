@@ -38,6 +38,8 @@
 	    wp_register_script('slider', get_template_directory_uri() . '/js/slider.js', 'jquery');
 		wp_register_script('assets', get_template_directory_uri() . '/js/assets.js', 'jquery');
 		wp_register_script('validate', get_template_directory_uri() . '/js/jquery.validate.js', 'jquery');
+		wp_register_script('all', get_template_directory_uri() . '/js/all.js', 'jquery');
+				
 	    if(is_home()){
 		    wp_enqueue_script( 'jquery' );
 		    wp_enqueue_script( 'slider' );  
@@ -47,7 +49,8 @@
 			wp_enqueue_script( 'validate' );
 		    wp_enqueue_script( 'assets' ); 
 		}
-		 
+		
+		wp_enqueue_script( 'all' );	 
 	}    
 	add_action('wp_enqueue_scripts', 'wd_load_script');
 	

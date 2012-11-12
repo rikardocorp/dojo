@@ -78,7 +78,7 @@ Template Name: rick-blog
 				<?php elseif( is_page('blog')) : 
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						$consulta ="category_name=fotos,videos,eventos,informacion&posts_per_page=8&paged=$paged"; ?>
-				<?php else: $cen = 0; ?>
+				<?php else: $cen = 2; ?>
 				<?php endif;?>
 					
 			<?php if ( $cen == 1) : 
@@ -103,10 +103,27 @@ Template Name: rick-blog
 				  		</article>
 			<?php 		endwhile; 
 						// Reset Post Data
-						wp_reset_postdata();
-				  	else: $cen = 0; 
+						wp_reset_postdata();?>
+						<center>
+							<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+						</center>
+						
+			<?php  	else: $cen = 0; 
 				  	endif;
-				  endif;?>
+				  elseif($cen == 2):?>
+			<?php 	if ( have_posts() && !is_home() ) : 
+						while ( have_posts() ) : the_post(); ?>
+							<article class="post post-estatico">
+					  			<div class="entrada">
+					  				<h2 class="titulo"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+						  			<hr>
+					  				<?php the_content(); ?>
+					  			</div>
+					  		</article>				
+			<?php 		endwhile;?>
+			<?php 	endif; ?>
+				  	  
+			<?php endif;?>
 			
 			<?php if ( $cen == 0) : ?>
 					<article class="post">
@@ -119,9 +136,7 @@ Template Name: rick-blog
 						</div>
 					</article>
 			<?php endif; //$hace = new haceTanto('2012-02-22 18:42:00','i'); echo 'Hace'.$hace;?>
-			<center>
-				<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
-			</center>
+			
 				</div>		
 				
 			<?php get_sidebar(); ?>	
