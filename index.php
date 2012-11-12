@@ -7,11 +7,11 @@
 				<img id="map" src="http://maps.googleapis.com/maps/api/staticmap?size=465x319&amp;maptype=roadmap&amp;markers=color:red%7Ccolor:red%7C-18.002966,-70.240314&amp;zoom=17&amp;sensor=false">
 			</div>
 			<div class="content datos">
-				<p>Numeros Telefonicos:</p>
-				<p>Direccion:</p>
-				<p>Email:</p>
-				<p>Facebook:</p>
-				<p>Twitter:</p>
+				<p>Numeros Telefonicos: 980731152</p>
+				<p>Direccion: Gimnasio top golden gym calle piura 376</p>
+				<p>Email: shinkyokushinkaiperu@gmail.com</p>
+				<p>Facebook: shinkyokushinkai peru</p>
+				<p>Twitter: Pronto</p>
 			</div>						
 		</section>
 <?php get_footer(); ?>
