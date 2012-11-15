@@ -23,6 +23,9 @@ nav.fixed{position:fixed;top:0;z-index:5;width:100%}
 .post .entrada hr{margin:10px 0}
 .post .entrada ul{padding-left:20px;}
 .post .entrada ul li{margin:15px 0}
+.post .entrada img{float:none;display:block;margin:0 auto}
+.post .entrada .alignright{float:right}
+.post .entrada .alignleft{float:left}
 .post .entrada .date{color:#6b6b6b;font-size:14px;font-weight:normal}
 .post .entrada .titulo{font-size:30px;font-weight:normal;}
 .post .entrada .titulo a{color:#000;text-decoration:none}
