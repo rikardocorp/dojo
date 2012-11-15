@@ -19,12 +19,16 @@ nav.fixed{position:fixed;top:0;z-index:5;width:100%}
 .posts{float:left;width:660px}
 .post{overflow:hidden;color:#000;margin-bottom:60px;}
 .post .entrada{background:#fff;width:490px;float:left;padding:20px;}
-.post .entrada p{font-family:Arial}
+.post .entrada p{font-family:Arial;margin:10px 0}
 .post .entrada hr{margin:10px 0}
+.post .entrada ul{padding-left:20px;}
+.post .entrada ul li{margin:15px 0}
 .post .entrada .date{color:#6b6b6b;font-size:14px;font-weight:normal}
-.post .entrada .titulo{font-size:30px;font-weight:normal}
+.post .entrada .titulo{font-size:30px;font-weight:normal;}
+.post .entrada .titulo a{color:#000;text-decoration:none}
 .post .entrada .mas-info{color:#000;margin-top:20px;display:block}
-.post .entrada .post-metadata a{color:#fff;background:#808080;text-decoration:none;padding:2px 5px;}
+.post .entrada .post-metadata{float:right;text-align:right;}
+.post .entrada .post-metadata a{color:#fff;background:#808080;text-decoration:none;padding:2px 5px;margin:3px 0;display:inline-block;zoom:1;*display:inline;}
 .post .entrada .post-metadata a:hover{background:#000}
 .post .datos{width:60px;float:left;}
 .post .datos .tipo{background-color:#ed1c24;width:60px;height:60px;display:block}
@@ -56,8 +60,9 @@ nav.fixed{position:fixed;top:0;z-index:5;width:100%}
 .commentlist .comment .reply{margin:0 10px 10px;float:right}
 .children{width:95%;margin-left:5%;border-left:1px solid #808080;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 #respond h3{text-transform:uppercase;background:#ed1c24;padding:5px 20px;-o-border-radius:0 0 30px 0;-ms-border-radius:0 0 30px 0;-moz-border-radius:0 0 30px 0;-webkit-border-radius:0 0 30px 0;border-radius:0 0 30px 0;border-left:10px solid #1a1a1a;margin:20px 0;font-weight:normal;letter-spacing:3px;border-bottom:1px solid #1a1a1a}
-#respond #commentform input,#respond #commentform textarea{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(1, #fff));background:-o-linear-gradient(top, #eee 0%, #fff 100%);background:-ms-linear-gradient(top, #eee 0%, #fff 100%);background:-moz-linear-gradient(top, #eee 0%, #fff 100%);background:-webkit-linear-gradient(top, #eee 0%, #fff 100%);background:linear-gradient(top, #eee 0%, #fff 100%);border:1px solid #fff;-o-border-radius:5px;-ms-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:10px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+#respond #commentform input,#respond #commentform textarea{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(1, #fff));background:-o-linear-gradient(top, #eee 0%, #fff 100%);background:-ms-linear-gradient(top, #eee 0%, #fff 100%);background:-moz-linear-gradient(top, #eee 0%, #fff 100%);background:-webkit-linear-gradient(top, #eee 0%, #fff 100%);background:linear-gradient(top, #eee 0%, #fff 100%);border:1px solid #fff;-o-border-radius:5px;-ms-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:10px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;outline:0;}
 #respond #commentform input:focus,#respond #commentform textarea:focus{border-color:#000}
+#respond #commentform label.error{color:#f00}
 #respond #commentform #comment{max-width:460px}
 #respond #commentform #submit{background:#4e4e4e;border:none;border-bottom:5px solid #808080;-o-border-radius:5px;-ms-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;color:#fff;cursor:pointer;float:right;font-size:12px;margin:10px 0;padding:7px 30px;text-transform:uppercase;clear:left}
 #respond #commentform .left{width:200px;float:left;}

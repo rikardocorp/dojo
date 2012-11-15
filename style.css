@@ -16,8 +16,8 @@
 .visuallyhidden{left:-9999px;position:absolute !important;top:-9999px}
 .invisible{visibility:hidden}
 .noselect{-o-user-select:none;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none;-khtml-user-select:none}
-.clearfix{zoom:1;}
-.clearfix:after{clear:both;content:"\0020";display:block;height:0;visibility:hidden}
+.clearfix,#encuentranos .content{zoom:1;}
+.clearfix:after,#encuentranos .content:after{clear:both;content:"\0020";display:block;height:0;visibility:hidden}
 .clear{display:block;clear:both;zoom:1}
 .nomargin{margin:0 !important}
 @import "fonts/stylesheet.css";
@@ -28,16 +28,28 @@ footer p{color:#808080;font-size:14px;line-height:22px;text-align:center;text-tr
 h1{font-size:29px;font-weight:normal;line-height:32px;}
 h1 span{font-size:46px;font-weight:bold}
 header .content{padding-top:30px;background:#000;margin-bottom:90px;position:relative}
-nav{background:#1e1e1e;border-top:2px solid #7b0e13;overflow:hidden;height:45px;line-height:45px;}
-nav a{color:#fff;text-decoration:none;padding:0 20px;}
+nav{background:#1e1e1e;border-top:2px solid #7b0e13;height:45px;line-height:45px;}
+nav a{color:#fff;text-decoration:none;padding:0 20px;display:block;}
 nav a:hover{text-decoration:underline}
-nav li{float:left;list-style:none}
+nav li{float:left;list-style:none;position:relative;-o-transition:.2s;-ms-transition:.2s;-moz-transition:.2s;-webkit-transition:.2s;transition:.2s;}
+nav li:hover{background:#4e4e4e;}
+nav li:hover ul{display:block}
+nav .menu ul{background:#1e1e1e;color:#f00;display:none;position:absolute;top:100%;z-index:10;}
+nav .menu ul li{border-top:1px solid #7b0e13;display:block;float:none;line-height:normal;}
+nav .menu ul li a{padding:10px}
 #logo{position:absolute;top:0;bottom:0;padding-top:20px;padding-left:40px;z-index:5;width:900px;background:url("images/kanjis.png") no-repeat right 50px;}
 #logo .kanjis{float:right}
 .slider{background:#000;height:549px}
 #encuentranos{text-align:center;}
-#encuentranos h3{background:url("images/encabezado.jpg");font-family:'droid';font-size:30px;font-style:italic;font-weight:normal;height:76px;line-height:76px;text-transform:uppercase;text-align:left}
-#encuentranos #map{margin:30px auto;border:5px solid #000;text-align:center}
+#encuentranos h3{background:url("images/encabezado.jpg");font-family:'droid';font-size:30px;font-style:italic;font-weight:normal;height:76px;line-height:76px;text-align:left;text-transform:uppercase}
+#encuentranos #map{text-align:center}
+#encuentranos .content.datos{background:#fff;color:#000;margin:60px auto;-o-box-shadow:-20px -20px 0 #4c4c4c;-ms-box-shadow:-20px -20px 0 #4c4c4c;-moz-box-shadow:-20px -20px 0 #4c4c4c;-webkit-box-shadow:-20px -20px 0 #4c4c4c;box-shadow:-20px -20px 0 #4c4c4c;-webkit-background-clip:padding-box;border:1px solid #000}
+#encuentranos .content > div{width:460px;float:left;padding:20px}
+#encuentranos .content .mapa{float:right;padding:0;font-size:0;overflow:hidden}
+#encuentranos .content .contacto a{color:#ed1c24}
+#encuentranos .content .contacto p{text-align:right;margin:10px 0;letter-spacing:2px;}
+#encuentranos .content .contacto p:first-letter{font-size:25px}
+#encuentranos .content .contacto strong{letter-spacing:1px}
 #tabs{width:940px;margin:-100px auto 20px auto;font-size:0;position:absolute;left:0;right:0;z-index:5;}
 #tabs > div{display:inline-block;zoom:1;*display:inline;font-size:16px;min-height:160px;vertical-align:top;width:33.3%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:20px}
 #tabs h2{font-size:20px;font-weight:normal;margin-bottom:5px}
@@ -55,46 +67,3 @@ nav li{float:left;list-style:none}
 #tabs .white h2{color:#ed1c24}
 #tabs .white h3{color:#515151}
 .content{width:1000px;margin:0 auto;display:block}
-
-/**/
-.post-estatico h2.titulo{ background:#ed1c24  }
-
-/* para boton facebook*/
-
-
-/* para menu desplegable */
-nav{ overflow: visible }
- .menu li {
- position:relative;
- }
-
-
-.menu li ul {
- z-index: 100 ;
- display:none;
- position:absolute;
- top:40px;
- padding:0;
- background: #1E1E1E;
- margin-left: 15px;
- }
-
-.menu li ul li {
- min-width:150px;
- border: 1px solid #313131;
- border-top:none;
- padding: 0px 10px;
- }
- .menu li ul li:first-child {
- border-top: 1px solid #9c0101;
- }
-.menu li ul li a {
- margin: 0;
- padding:0;
- }
-.menu li ul li a:hover {
- width: 240px;
- margin: 0;
- color: #9c0101;
- background:none;
- }

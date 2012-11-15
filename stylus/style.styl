@@ -46,21 +46,47 @@ header
 		background black
 		margin-bottom 90px
 		position relative
+
 nav 
 	background #1e1e1e
 	border-top 2px solid #7b0e13
-	overflow hidden
+	//overflow hidden
 	height 45px 
 	line-height 45px
 	a 
 		color white
 		text-decoration none
 		padding 0 20px
+		display block
 		&:hover 
 			text-decoration underline
 	li 
 		float left
 		list-style none
+		position relative
+		transition .2s
+		&:hover 
+			background #4E4E4E
+			ul 
+				display block
+
+	.menu 
+		ul 
+			background #1E1E1E
+			color red
+			display none
+			position absolute
+			top 100%
+			z-index 10
+			li 
+				border-top 1px solid #7b0e13
+				display block
+				float none
+				line-height normal
+				a 
+					padding 10px
+
+
 #logo
 	position absolute
 	top 0
@@ -72,10 +98,7 @@ nav
 	background url('images/kanjis.png') no-repeat right 50px
 	.kanjis
 		float right 
-// .slider
-// 	float right
-// 	clear right
-// 	display inline-block
+
 .slider 
 	background black
 	height 549px
@@ -89,12 +112,40 @@ nav
 		font-weight normal
 		height 76px
 		line-height 76px
-		text-transform uppercase
 		text-align left
+		text-transform uppercase
 	#map 
-		margin 30px auto
-		border 5px solid black
+		//margin 30px auto
+		//border 5px solid black
 		text-align center
+	.content	
+		@extends .clearfix
+		&.datos
+			background white
+			color black
+			margin 60px auto
+			box-shadow   -20px -20px 0 #4C4C4C
+			border 1px solid black
+		> div 
+			width 460px
+			float left
+			padding 20px
+		.mapa
+			float right
+			padding 0
+			font-size 0
+			overflow hidden
+		.contacto
+			a 
+				color #ED1C24
+			p 
+				text-align right 
+				margin 10px 0
+				letter-spacing 2px
+				&:first-letter
+					font-size 25px
+			strong
+				letter-spacing 1px
 #tabs 
 	width 940px
 	margin -100px auto 20px auto
@@ -156,3 +207,5 @@ nav
 	width 1000px
 	margin 0 auto
 	display block
+
+
