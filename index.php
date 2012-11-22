@@ -4,6 +4,14 @@
 				<span class="content">Encuentranos</span>
 			</h3>
 			<div class="content datos">
+				<section>
+					<div class="title1">
+					<h2>Contactenos</h2>
+				</div>
+				<div class="title2">
+					<h2>Mapa</h2>
+				</div>
+				</section>
 				<div class="mapa">
 					<img id="map" src="http://maps.googleapis.com/maps/api/staticmap?size=465x319&amp;maptype=roadmap&amp;markers=color:red%7Ccolor:red%7C-18.002966,-70.240314&amp;zoom=17&amp;sensor=false">	
 				</div>

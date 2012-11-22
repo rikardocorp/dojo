@@ -16,8 +16,8 @@
 .visuallyhidden{left:-9999px;position:absolute !important;top:-9999px}
 .invisible{visibility:hidden}
 .noselect{-o-user-select:none;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none;-khtml-user-select:none}
-.clearfix,#encuentranos .content{zoom:1;}
-.clearfix:after,#encuentranos .content:after{clear:both;content:"\0020";display:block;height:0;visibility:hidden}
+.clearfix,#encuentranos .content,#encuentranos .content section{zoom:1;}
+.clearfix:after,#encuentranos .content:after,#encuentranos .content section:after{clear:both;content:"\0020";display:block;height:0;visibility:hidden}
 .clear{display:block;clear:both;zoom:1}
 .nomargin{margin:0 !important}
 @import "fonts/stylesheet.css";
@@ -42,14 +42,16 @@ nav .menu ul li a{padding:10px}
 .slider{background:#000;height:549px}
 #encuentranos{text-align:center;}
 #encuentranos h3{background:url("images/encabezado.jpg");font-family:'droid';font-size:30px;font-style:italic;font-weight:normal;height:76px;line-height:76px;text-align:left;text-transform:uppercase}
-#encuentranos #map{text-align:center}
-#encuentranos .content.datos{background:#fff;color:#000;margin:60px auto;-o-box-shadow:-20px -20px 0 #4c4c4c;-ms-box-shadow:-20px -20px 0 #4c4c4c;-moz-box-shadow:-20px -20px 0 #4c4c4c;-webkit-box-shadow:-20px -20px 0 #4c4c4c;box-shadow:-20px -20px 0 #4c4c4c;-webkit-background-clip:padding-box;border:1px solid #000}
+#encuentranos #map{text-align:center;border:5px solid #4c4c4c;margin-top:40px;height:280px;float:right;margin-right:20px}
+#encuentranos .content.datos{background:#000;color:#000;margin:60px auto;border:1px solid #000;padding-top:20px}
 #encuentranos .content > div{width:460px;float:left;padding:20px}
+#encuentranos .content .title1{background:#f00 url("images/title1.png") no-repeat 10px;right:40px;position:relative;color:#fff;width:300px;float:left;padding:10px;text-align:center}
+#encuentranos .content .title2{background:#4c4c4c url("images/title2.png") no-repeat right 6px;color:#fff;float:right;position:relative;left:40px;width:300px;padding:10px;text-align:center}
 #encuentranos .content .mapa{float:right;padding:0;font-size:0;overflow:hidden}
-#encuentranos .content .contacto a{color:#ed1c24}
-#encuentranos .content .contacto p{text-align:right;margin:10px 0;letter-spacing:2px;}
+#encuentranos .content .contacto a{color:#fff}
+#encuentranos .content .contacto p{text-align:right;margin:10px 0;color:#fff;font-size:16px;}
 #encuentranos .content .contacto p:first-letter{font-size:25px}
-#encuentranos .content .contacto strong{letter-spacing:1px}
+#encuentranos .content .contacto strong{letter-spacing:1px;color:#f00;display:block;text-align:left;font-size:18px}
 #tabs{width:940px;margin:-100px auto 20px auto;font-size:0;position:absolute;left:0;right:0;z-index:5;}
 #tabs > div{display:inline-block;zoom:1;*display:inline;font-size:16px;min-height:160px;vertical-align:top;width:33.3%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:20px}
 #tabs h2{font-size:20px;font-weight:normal;margin-bottom:5px}
