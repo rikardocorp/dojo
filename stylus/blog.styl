@@ -21,6 +21,8 @@ nav
 #entradas
 	padding-top 50px
 	overflow hidden
+	min-height 900px
+
 	.content
 		position relative
 		@extends .clearfix
@@ -32,6 +34,7 @@ nav
 	overflow hidden
 	color black
 	margin-bottom 60px
+
 	.entrada 
 		background white
 		width 490px
@@ -43,31 +46,60 @@ nav
 		hr 
 			margin 10px 0
 		ul 
-			padding-left 20px
+			padding-left 0px
 			li 
 				margin 15px 0
+				list-style none 
+				&:before
+					font-family: 'icomoon';
+					font-style: normal;
+					speak: none;
+					font-weight: normal;
+					-webkit-font-smoothing: antialiased;
+					content: "\e00e";
+					margin-right 10px
+
 		img 
 			float none
 			display block
 			margin 0 auto
 		.alignright 
 			float right 
+			margin  10px 0 10px 10px
 		.alignleft 
 			float left
+			margin  10px 10px 10px 0
+			
 		.date 
 			color #6b6b6b
 			font-size 14px
 			font-weight normal
 		.titulo
 			font-size 30px
+			background #ED1C24
+			margin 0 -20px 20px
+			padding 5px 20px
 			font-weight normal
+			color white
+			text-shadow 2px 2px 0 black
+
 			a 
-				color black
+				color white
+				text-shadow 2px 2px 0 black
 				text-decoration none 
 		.mas-info
 			color black 
 			margin-top 20px
 			display block
+			text-decoration none
+			&:before
+				font-family: 'icomoon';
+				font-style: normal;
+				speak: none;
+				font-weight: normal;
+				content: "\e009";
+				margin-right 10px
+				-webkit-font-smoothing: antialiased;
 		.post-metadata
 			float right
 			text-align right
@@ -80,6 +112,9 @@ nav
 				display inline-block
 				&:hover 
 					background black
+	&.post-estatico
+		.entrada
+			width 615px
 	.datos 
 		width 60px
 		float left
@@ -129,11 +164,34 @@ nav
 		display block
 		padding 5px 0
 		text-decoration none
+
+		&:before
+			font-family: 'icomoon';
+			font-style: normal;
+			speak: none;
+			font-weight: normal;
+			-webkit-font-smoothing: antialiased;
+			margin-right 20px
+
+
 		&:hover 
 			text-decoration underline
 	li 
 		list-style none
 		padding-left 50px
+	#menu-menu-categorias li
+		&:nth-child(1)
+			& a:before
+				content: "\e010";
+		&:nth-child(2)
+			& a:before
+				content: "\e002";
+		&:nth-child(3)
+			& a:before
+				content: "\e008";
+		&:nth-child(4)
+			& a:before
+				content: "\e00f";
 	.container
 		position relative
 		width auto

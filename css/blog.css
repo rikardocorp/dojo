@@ -14,25 +14,28 @@ header h1{float:left;text-align:right}
 header img{float:left}
 a{color:#fff}
 nav.fixed{position:fixed;top:0;z-index:5;width:100%}
-#entradas{padding-top:50px;overflow:hidden;}
+#entradas{padding-top:50px;overflow:hidden;min-height:900px;}
 #entradas .content{position:relative;}
 .posts{float:left;width:660px}
 .post{overflow:hidden;color:#000;margin-bottom:60px;}
 .post .entrada{background:#fff;width:490px;float:left;padding:20px;}
 .post .entrada p{font-family:Arial;margin:10px 0}
 .post .entrada hr{margin:10px 0}
-.post .entrada ul{padding-left:20px;}
-.post .entrada ul li{margin:15px 0}
+.post .entrada ul{padding-left:0;}
+.post .entrada ul li{margin:15px 0;list-style:none;}
+.post .entrada ul li:before{font-family:'icomoon';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e00e";margin-right:10px}
 .post .entrada img{float:none;display:block;margin:0 auto}
-.post .entrada .alignright{float:right}
-.post .entrada .alignleft{float:left}
+.post .entrada .alignright{float:right;margin:10px 0 10px 10px}
+.post .entrada .alignleft{float:left;margin:10px 10px 10px 0}
 .post .entrada .date{color:#6b6b6b;font-size:14px;font-weight:normal}
-.post .entrada .titulo{font-size:30px;font-weight:normal;}
-.post .entrada .titulo a{color:#000;text-decoration:none}
-.post .entrada .mas-info{color:#000;margin-top:20px;display:block}
+.post .entrada .titulo{font-size:30px;background:#ed1c24;margin:0 -20px 20px;padding:5px 20px;font-weight:normal;color:#fff;text-shadow:2px 2px 0 #000;}
+.post .entrada .titulo a{color:#fff;text-shadow:2px 2px 0 #000;text-decoration:none}
+.post .entrada .mas-info{color:#000;margin-top:20px;display:block;text-decoration:none;}
+.post .entrada .mas-info:before{font-family:'icomoon';font-style:normal;speak:none;font-weight:normal;content:"\e009";margin-right:10px;-webkit-font-smoothing:antialiased}
 .post .entrada .post-metadata{float:right;text-align:right;}
 .post .entrada .post-metadata a{color:#fff;background:#808080;text-decoration:none;padding:2px 5px;margin:3px 0;display:inline-block;zoom:1;*display:inline;}
 .post .entrada .post-metadata a:hover{background:#000}
+.post.post-estatico .entrada{width:615px}
 .post .datos{width:60px;float:left;}
 .post .datos .tipo{background-color:#ed1c24;width:60px;height:60px;display:block}
 .post .datos .videos{background:#ed1c24 url("../images/videos.png") no-repeat center}
@@ -44,8 +47,13 @@ nav.fixed{position:fixed;top:0;z-index:5;width:100%}
 .sidebar h4{background:#ed1c24;font-weight:normal;height:43px;letter-spacing:3px;line-height:43px;text-align:center;text-transform:uppercase;width:300px;margin:10px 0 30px}
 .sidebar ul{background:#4e4e4e;margin:0 auto 50px auto;padding:0;padding:10px 0;width:265px}
 .sidebar a{color:#fff;display:block;padding:5px 0;text-decoration:none;}
+.sidebar a:before{font-family:'icomoon';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;margin-right:20px}
 .sidebar a:hover{text-decoration:underline}
 .sidebar li{list-style:none;padding-left:50px}
+.sidebar #menu-menu-categorias li:nth-child(1) a:before{content:"\e010"}
+.sidebar #menu-menu-categorias li:nth-child(2) a:before{content:"\e002"}
+.sidebar #menu-menu-categorias li:nth-child(3) a:before{content:"\e008"}
+.sidebar #menu-menu-categorias li:nth-child(4) a:before{content:"\e00f"}
 .sidebar .container{position:relative;width:auto;}
 .sidebar .container.fixed{position:fixed;top:97px}
 .post-comentarios ol,.post-comentarios ul{list-style:none}
