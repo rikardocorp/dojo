@@ -23,7 +23,7 @@
 @import "fonts/stylesheet.css";
 *{margin:0;padding:0}
 body{background:#313131 url("images/cartographer.jpg");font-family:'aller',Arial;color:#fff;font-size:16px}
-footer{background:#1a1a1a;border-top:1px solid #f00;padding:25px 0;}
+footer{background:#1a1a1a;border-top:1px solid #ed1c24;padding:25px 0;}
 footer p{color:#808080;font-size:14px;line-height:22px;text-align:center;text-transform:uppercase}
 h1{font-size:29px;font-weight:normal;line-height:32px;}
 h1 span{font-size:46px;font-weight:bold}
@@ -34,23 +34,26 @@ nav a:hover{text-decoration:underline}
 nav li{float:left;list-style:none;position:relative;-o-transition:.2s;-ms-transition:.2s;-moz-transition:.2s;-webkit-transition:.2s;transition:.2s;}
 nav li:hover{background:#4e4e4e;}
 nav li:hover ul{display:block}
-nav .menu ul{background:#1e1e1e;color:#f00;display:none;position:absolute;top:100%;z-index:10;}
+nav .menu ul{background:#1e1e1e;color:#ed1c24;display:none;position:absolute;top:100%;z-index:10;}
 nav .menu ul li{border-top:1px solid #7b0e13;display:block;float:none;line-height:normal;}
 nav .menu ul li a{padding:10px}
-#logo{position:absolute;top:0;bottom:0;padding-top:20px;padding-left:40px;z-index:5;width:900px;background:url("images/kanjis.png") no-repeat right 50px;}
+#logo{position:absolute;top:0;bottom:0;padding-top:20px;padding-left:40px;padding-right:40px;z-index:5;width:900px;background:url("images/kanjis.png") no-repeat right 50px;}
 #logo .kanjis{float:right}
+.peru{padding: 5px 0 0 10px;}
 .slider{background:#000;height:549px}
 #encuentranos{text-align:center;}
 #encuentranos h3{background:url("images/encabezado.jpg");font-family:'droid';font-size:30px;font-style:italic;font-weight:normal;height:76px;line-height:76px;text-align:left;text-transform:uppercase}
-#encuentranos #map{text-align:center;border:5px solid #4c4c4c;margin-top:40px;height:230px;float:right;margin-right:20px}
-#encuentranos .content.datos{background:#000;color:#000;margin:60px auto;border:1px solid #000;padding-top:20px;width:840px;padding:0 10px}
+#encuentranos #map{text-align:center;border:3px solid #4c4c4c;margin-top:20px;height:200px;float:right;margin-right:20px}
+#encuentranos .content.datos{position:relative; background:#000;color:#000;margin:30px auto;border:1px solid #000;width:720px;padding:0 10px 20px}
 #encuentranos .content > div{width:400px;float:left;padding:20px}
-#encuentranos .content .title1{background:#f00 url("images/title1.png") no-repeat 10px;right:40px;position:relative;color:#fff;width:250px;font-size:13px;float:left;padding:10px;text-align:center}
-#encuentranos .content .title2{background:#4c4c4c url("images/title2.png") no-repeat right 6px;color:#fff;float:right;font-size:13px;position:relative;left:40px;width:250px;padding:10px;text-align:center}
+#encuentranos .content .title1{background:#ed1c24 url("images/title1.png") no-repeat 14px;right:40px;position:relative;color:#fff;width:180px;font-size:12px;float:left;padding:13px 30px 13px 10px;text-align:right;margin-top:20px; }
+#encuentranos .content .title-medio{ height:39px; background:rgba(255,255,255,0.07);width:370px;padding:0px ;margin:20px 0 0; float: left;position:relative;right:40px; border-top:#ed1c24 4px solid;border-bottom:#4c4c4c solid 5px; color:#fff;}
+#encuentranos .content .title2{background:#4c4c4c url("images/title2.png") no-repeat 165px ;color:#fff;font-size:12px;position:absolute;right:-40px;width:180px;padding:13px 10px 13px 30px;text-align:left;margin-top:20px;}
 #encuentranos .content .mapa{float:right;padding:0;font-size:0;overflow:hidden}
+#encuentranos .content .contacto {width:280px}
 #encuentranos .content .contacto a{color:#fff}
-#encuentranos .content .contacto p{text-align:right;margin:10px 0;color:#fff;font-size:16px}
-#encuentranos .content .contacto strong{letter-spacing:1px;color:#f00;display:block;text-align:left;font-size:18px}
+#encuentranos .content .contacto p{text-align:right;margin:10px 0;color:#fff;font-size:13px}
+#encuentranos .content .contacto strong{letter-spacing:0px;color:#ed1c24;display:block;text-align:left;font-size:15px}
 #tabs{width:940px;margin:-100px auto 20px auto;font-size:0;position:absolute;left:0;right:0;z-index:5;}
 #tabs > div{display:inline-block;zoom:1;*display:inline;font-size:16px;min-height:160px;vertical-align:top;width:33.3%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:20px}
 #tabs h2{font-size:20px;font-weight:normal;margin-bottom:5px}
@@ -67,6 +70,66 @@ nav .menu ul li a{padding:10px}
 #tabs .white{background:#fff;color:#000;}
 #tabs .white h2{color:#ed1c24}
 #tabs .white h3{color:#515151}
+/* para ticker de publicidad */
+/* liScroll styles */
+.tickeroverlay-left{
+	background-image:url('images/left.png');
+	display:block;
+	pointer-events:none;
+	position:absolute;
+	z-index:30;
+	height:39px;
+	width:40px;
+	top:0;
+	left:0px;
+}
+	
+.tickeroverlay-right{
+	background-image:url('images/right.png');
+	display:block;
+	pointer-events:none;
+	position:absolute;
+	z-index:30;
+	height:39px;
+	width:40px;
+	top:0;
+	right:0px;
+}
+.tickercontainer { /* the outer div */
+width: 370px; 
+height: 39px; 
+margin: 0; 
+overflow: hidden; 
+}
+.tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
+padding: 13px;
+top: 8px;
+height: 39px;
+/*width: 718px;*/
+overflow: hidden;
+}
+ul.newsticker { /* that's your list */
+position: relative;
+font: oblique  11px 'aller',Arial;
+list-style-type: none;
+height: 38px;
+}
+ul.newsticker li {
+float: left; /* important: display inline gives incorrect results when you check for elem's width */
+margin: 0;
+padding-right: 60px;
+/*background: #fff;*/
+}
+ul.newsticker a {
+white-space: nowrap;
+padding: 0px;
+color: #ff0000;
+margin: 0 50px 0 0;
+} 
+ul.newsticker span {
+margin: 0 10px 0 0;
+} 
+/*    */
 .content{width:1000px;margin:0 auto;display:block}
 @font-face {
 		font-family: 'icomoon';

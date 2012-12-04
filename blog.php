@@ -2,8 +2,7 @@
 /*
 Template Name: rick-blog
 */
-?>
-
+$base_url = get_template_directory_uri(); ?>
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 <head>
@@ -33,9 +32,9 @@ Template Name: rick-blog
    </title>
 	
 	<!--<link href='<?= get_template_directory_uri().'/css/slider.css' ?>' rel="stylesheet" />-->
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo $base_url; ?>/images/favicon.ico" />
 	<link href='<?php bloginfo( 'stylesheet_url' ); ?>' rel="stylesheet" />
-	<link href='<?php echo get_template_directory_uri().'/css/blog.css' ?>' rel="stylesheet" />
+	<link href='<?php echo $base_url.'/css/blog.css' ?>' rel="stylesheet" />
 	<!--[if IE]>
     	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -48,8 +47,8 @@ Template Name: rick-blog
 	<section id="wrapper">
 		<header>
 			<div class="content">
-				<img src="<?= get_template_directory_uri()?>/images/dojo.png"/>	
-				<h1>WORLD KARATE ORGANIZATION <br><span>SHINKYOKUSHINKAI</span> <br>Per&uacute;</h1>
+				<img src="<?= $base_url?>/images/dojo.png"/>	
+				<h1>WORLD KARATE ORGANIZATION <br><span>SHINKYOKUSHINKAI</span> <br><img class="peru" src="<?= $base_url.'/images/peru.png' ?>" />Per&uacute;</h1>
 			</div>
 		</header>
 		<nav>
@@ -132,7 +131,7 @@ Template Name: rick-blog
 							<span class="n-coment">67</span>
 						</div>
 						<div class="entrada">
-							<h2 class="titulo">Lo sentimos, no se han encontrado entrada</h2>				
+							<h2 class="titulo">Lo sentimos, no se han encontrado entradas</h2>				
 						</div>
 					</article>
 			<?php endif; //$hace = new haceTanto('2012-02-22 18:42:00','i'); echo 'Hace'.$hace;?>

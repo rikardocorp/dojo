@@ -1,3 +1,4 @@
+<?php $base_url = get_template_directory_uri(); ?>
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 <head>
@@ -27,14 +28,11 @@
         $site_description = get_bloginfo( 'description', 'display' );
         if ( $site_description && ( is_home() || is_front_page() ) )
         echo " | $site_description";
- 
-        // Agrega el número de página si es necesario:
-        //if ( $paged >= 2 || $page >= 2 )
-        //echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+
         ?>
    </title>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
-	<link href='<?php echo get_template_directory_uri().'/css/slider.css' ?>' rel="stylesheet" />
+    <link rel="shortcut icon" href="<?php echo $base_url; ?>/images/favicon.ico" />
+	<link href='<?php echo $base_url.'/css/slider.css' ?>' rel="stylesheet" />
 	<link href='<?php bloginfo( 'stylesheet_url' ); ?>' rel="stylesheet" />
 	
 	<!--[if IE]>
@@ -48,34 +46,24 @@
 		<nav>
 			<div class="content">
 				<?php wp_nav_menu(array('theme_location'=>'MenuPrincipal','container'=>'false')); ?>
-				<!--<ul>
-					<li><a href="index.html">Principal</a></li>
-					<li><a href="#">Historia</a></li>
-					<li><a href="#">Actividades</a></li>
-					<li><a href="#">Fotos</a></li>
-					<li><a href="#">Contáctenos</a></li>
-					<li><a href="blog.html">Blog</a></li>
-				</ul>-->
-			</div>
-			
+			</div>	
 		</nav>
 		<header>
 			<div class="content">
 				<section id="slider" class="slider">
 					<div class="figures cycler cf">
-						<figure class="active"><img src="<?= get_template_directory_uri().'/images/slide1.jpg' ?>" alt="" /></figure>
-						<figure><img src="<?= get_template_directory_uri().'/images/slide2.jpg' ?>" alt="" /></figure>
-						<figure><img src="<?= get_template_directory_uri().'/images/slide3.jpg' ?>" alt="" /></figure>
-						<figure><img src="<?= get_template_directory_uri().'/images/slide4.jpg' ?>" alt="" /></figure>
-						
+						<figure class="active"><img src="<?= $base_url.'/images/slide5.jpg' ?>" alt="" /></figure>
+						<figure><img src="<?= $base_url.'/images/slide6.jpg' ?>" alt="" /></figure>
+						<figure><img src="<?= $base_url.'/images/slide1.jpg' ?>" alt="" /></figure>
+						<figure><img src="<?= $base_url.'/images/slide2.jpg' ?>" alt="" /></figure>
+						<figure><img src="<?= $base_url.'/images/slide3.jpg' ?>" alt="" /></figure>
+						<figure><img src="<?= $base_url.'/images/slide4.jpg' ?>" alt="" /></figure>
 					</div>
 				</section>
-				
 				<div id="logo">
-					<img src="<?= get_template_directory_uri().'/images/logo.png' ?>"/>
-					<h1>WORLD KARATE ORGANIZATION <br><span>SHINKYOKUSHINKAI</span> <br>Per&uacute;</h1>
+					<img src="<?= $base_url.'/images/logo.png' ?>"/>
+					<h1>ORGANIZACION DE KARATE <br><span>SHINKYOKUSHINKAI</span> <br>Per&uacute;<img class="peru" src="<?= $base_url.'/images/peru.png' ?>" /></h1>
 				</div>
-				
 				<div id="tabs">
 					<?php $classCat = array('white','gray','red'); $i=0; ?>
 					<?php query_posts('category_name=servicios&posts_per_page=3&order=ASC' );
